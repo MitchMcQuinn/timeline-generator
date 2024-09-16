@@ -19,7 +19,7 @@ def generate_milestones(year, quarter):
     cycle_start_date = get_quarter_end_date(year, quarter)
     milestones["Cycle Start Date"] = cycle_start_date
     
-    submission_deadline = get_next_weekday(cycle_start_date + timedelta(days=7), [0, 1, 2])
+    submission_deadline = get_next_weekday(cycle_start_date + timedelta(days=7), [1])
     milestones["Submission Deadline"] = submission_deadline
     
     presentation_time = submission_deadline + relativedelta(weekday=TH(+1))
